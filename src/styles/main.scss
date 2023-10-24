@@ -1,0 +1,25 @@
+@use 'reset';
+@use 'header';
+@use 'variables';
+
+.container {
+    width: 100%;
+    max-width: 100%;
+    background-color: variables.$corDeFundo;
+}
+
+.title {
+    font-family: 'Caveat', cursive;
+    font-weight: 700;
+    background-image: linear-gradient(#faaa5e, rgb(120, 18, 18), black, rgb(120, 18, 18));
+    color: variables.$corTextoSecundario;
+    display: block;
+    text-align: center;
+    padding: 8px 0;
+    border: 2px variables.$corTextoPrincipal;
+    border-style: groove;
+    border-radius: 8px;
+    
+    
+}
+
