@@ -25,9 +25,6 @@
                     border-bottom: 2px solid variables.$corTextoPrincipal;
                 }
 
-                &:hover::before {
-                    width: 10%;
-                }
 
             }
         }
@@ -46,6 +43,7 @@
     }
 
     &__paragrafo {
+        overflow-wrap: break-word;
         position: absolute;
         top: 82%; /* ajuste na vertical*/
         left: calc(60% + 145px); /* ajuste na horizontal */
@@ -57,6 +55,7 @@
         text-align: justify;
         font-family: 'Caveat', cursive;
         font-size: 12px;
+        
     }
 
     &__span {
@@ -69,4 +68,112 @@
 .nave {
     display: inline;
     font-family: 'Oswald', sans-serif;
+}
+
+
+@media (min-width:768px) and (max-width: 1023px) {
+
+    .capa {
+        max-width: 100%;
+        background-color:black;
+
+        &__paragrafo {
+            width: 261px;
+            background-color: black;
+            overflow-wrap: break-word;
+            position: absolute;
+            top: 82%; /* ajuste na vertical*/
+            left: calc(45% + 218px); /* ajuste na horizontal */
+            transform: translate(-50%, -50%); /* Centralize o texto no centro da imagem */
+            background: rgba(0, 0, 0, 0.7); /* Fundo com transparência (neste caso, 0.7) */
+            color: #fff; /* Cor do texto */
+            padding: 10px; 
+            background-color: transparent;
+            text-align: justify;
+            font-family: 'Caveat', cursive;
+            font-size: 12px;
+            
+        }
+    
+        &__span {
+            color: rgb(255, 0, 0);
+            font-size: 18px;
+        }
+    
+    }
+    
+    .nave {
+        display: inline;
+        font-family: 'Oswald', sans-serif;
+    }  
+}
+
+@media(min-width:320px) and (max-width:767px) {
+ 
+    .capa {
+        max-width: 100%;
+        background-color:black;
+    
+        &__lista {
+            display: flex;
+            justify-content: center;
+            
+            .item {
+                margin-top: 10px;
+    
+                &__link {
+                    align-items: center;
+                    font-family: 'Oswald', sans-serif;
+                    border-right: 1px solid variables.$corTextoSecundario;
+                    border-left: 1px solid variables.$corTextoSecundario;
+                    padding-right: 20px;
+                    padding-left: 20px;
+    
+                    &:hover {
+                        border-bottom-width: 1px;
+                        border-bottom: 2px solid variables.$corTextoPrincipal;
+                    }
+    
+    
+                }
+            }
+            
+        }
+    
+        img {
+            margin-top: 25px;
+            max-width: 100%;
+            border-radius: 100px;
+    
+        }
+    
+        &__content {
+            position: static;
+        }
+    
+        &__paragrafo {
+            position: relative;
+            width: 80%;
+            display: block; /* Redefinindo para a configuração padrão */
+            overflow-wrap: initial; /* Redefinindo para a configuração padrão, caso necessário */
+            top: auto; /* Redefinindo para a configuração padrão, caso necessário */
+            left: auto; /* Redefinindo para a configuração padrão, caso necessário */
+            transform: none;
+            margin-bottom: 10px;
+            margin: 0 auto;
+            
+        }
+    
+        &__span {
+            color: rgb(255, 0, 0);
+            font-size: 18px;
+        }
+    
+    }
+    
+    .nave {
+        display: inline;
+        font-family: 'Oswald', sans-serif;
+    }
+    
 }

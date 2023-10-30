@@ -1,0 +1,102 @@
+
+
+.card {
+    width: 320px;
+    height: 350px;
+    position: relative;
+    perspective: 800px;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.frente, .verso {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: all 1s;
+    border: 2px solid #fffa6f;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.frente {
+    background-color: #5c1e1e;
+    color: #fff;
+    background-image: url(https://easyreadernews.com/wp-content/uploads/2021/01/Beethoven.old_-1200x801.jpeg);
+    background-size: 100% 100%;  /* Faz a imagem ocupar todo o espaço, mesmo que ela saia da proporção */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    width: 100%;
+    height: 100%;
+}
+
+.verso {
+    background-color: #faa803;
+    transform: rotateY(-180deg);
+    color: #5c1e1e;
+    background-image: url(https://easyreadernews.com/wp-content/uploads/2021/01/Beethoven.young_.jpeg);
+    background-size: 100% 100%;  /* Faz a imagem ocupar todo o espaço, mesmo que ela saia da proporção */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    width: 100%;
+    height: 100%;
+}
+
+
+
+#card2Frente {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7LuDsg83LIvk0rOuqo6t7ABv9byUFe2b2oA&usqp=CAU);
+}
+
+#card2Costa {
+    background-image: url(https://m.media-amazon.com/images/M/MV5BOTNlMjAzMDMtZGRjYy00MzFjLWIwMTAtYWVmYmVhZjZjNzZhXkEyXkFqcGdeQXVyNTY0NzUxNA@@._V1_.jpg);
+}
+
+#card3Frente {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7LuDsg83LIvk0rOuqo6t7ABv9byUFe2b2oA&usqp=CAU);
+    width: 100%;
+}
+
+#card3Costa {
+    background-image: url(https://m.media-amazon.com/images/M/MV5BOTNlMjAzMDMtZGRjYy00MzFjLWIwMTAtYWVmYmVhZjZjNzZhXkEyXkFqcGdeQXVyNTY0NzUxNA@@._V1_.jpg);
+    width: 100%;
+}
+
+.card:hover .frente {
+    transform: rotateY(180deg);
+}
+
+.card:hover .verso {
+    transform: rotateY(0);
+}
+
+
+
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+    .sobre{
+
+        .card {
+            width: 290px;
+            height: 320px;
+            position: relative;
+            perspective: 800px;
+            margin: 0 auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+
+
+    .enredo {
+        .card {
+            width: 100%;
+        }
+    }
+
+    
+
+}

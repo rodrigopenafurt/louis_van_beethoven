@@ -1,11 +1,17 @@
 @use 'reset';
 @use 'header';
 @use 'variables';
+@use 'card';
+@use 'section';
 
 .container {
     width: 100%;
     max-width: 100%;
     background-color: variables.$corDeFundo;
+}
+
+h3 {
+    color: red;
 }
 
 .title {
@@ -19,7 +25,36 @@
     border: 2px variables.$corTextoPrincipal;
     border-style: groove;
     border-radius: 8px;
+
+    &--h2 {
+        width: 90%;
+        margin: 0 auto;
+        font-family: 'Caveat', cursive;
+        font-weight: 700;
+        background-image: none;
+        color: variables.$corTextoSecundario;
+        display: block;
+        text-align: center;
+        padding: 8px 0;
+        border: 2px variables.$corTextoPrincipal;
+        border-style: groove;
+        border-radius: 8px;
+        text-align: center;
+    }
     
+}
+
+
+
+
+@media (min-width:768px) and (max-width: 1023px) {
+    .container {
+        width: 100%;
+        
+    }
+}
+
+@media(min-width:320px) and (max-width:767px) {
     
 }
 
