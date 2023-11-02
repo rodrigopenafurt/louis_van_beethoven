@@ -9,22 +9,29 @@
 
     
     &__content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        margin: 50px 0;
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px; 
+        margin: 80px 0;
+        text-align: center;
+        padding: 20px;
         
+
+
+    }
+
+    &__item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: calc(50% - 16px);
+
         p {
-            padding-top: 20%;
-            padding-left: 50px;
-            
+            max-width: 70%;
+            padding: 40px 0;
         }
-
-        #sobre__paragrafo2 {
-            padding-right: 50px;
-            padding-bottom: 20px;
-        }
-
-
     }
 }
 
